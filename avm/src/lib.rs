@@ -91,7 +91,7 @@ pub fn install_version(version: &Version, force: bool) -> Result<()> {
         .args([
             "install",
             "--git",
-            "https://github.com/coral-xyz/anchor",
+            "https://github.com/RuvenSalamon/anchor",
             "--tag",
             &format!("v{}", &version),
             "anchor-cli",
