@@ -171,8 +171,8 @@ pub fn fetch_versions() -> Vec<semver::Version> {
 
     let client = reqwest::blocking::Client::new();
     let versions: Vec<Release> = client
-        .get("https://api.github.com/repos/coral-xyz/anchor/tags")
-        .header(USER_AGENT, "avm https://github.com/coral-xyz/anchor")
+        .get("https://api.github.com/repos/RuvenSalamon/anchor/tags")
+        .header(USER_AGENT, "avm https://github.com/RuvenSalamon/anchor")
         .send()
         .unwrap()
         .json()
