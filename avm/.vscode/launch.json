@@ -1,0 +1,78 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in library 'avm'",
+      "cargo": {
+        "args": ["test", "--no-run", "--lib", "--package=avm"],
+        "filter": {
+          "name": "avm",
+          "kind": "lib"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'avm'",
+      "cargo": {
+        "args": ["build", "--bin=avm", "--package=avm"],
+        "filter": {
+          "name": "avm",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'avm'",
+      "cargo": {
+        "args": ["test", "--no-run", "--bin=avm", "--package=avm"],
+        "filter": {
+          "name": "avm",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'anchor'",
+      "cargo": {
+        "args": ["build", "--bin=anchor", "--package=avm"],
+        "filter": {
+          "name": "anchor",
+          "kind": "bin"
+        }
+      },
+      "args": ["build"],
+      "cwd": "${userHome}/Documents/code/some-name"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'anchor'",
+      "cargo": {
+        "args": ["test", "--no-run", "--bin=anchor", "--package=avm"],
+        "filter": {
+          "name": "anchor",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}
