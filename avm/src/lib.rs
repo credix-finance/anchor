@@ -91,7 +91,7 @@ pub fn install_version(version: &Version, force: bool) -> Result<()> {
         .args([
             "install",
             "--git",
-            "https://github.com/RuvenSalamon/anchor",
+            "https://github.com/credix-finance/anchor",
             "--tag",
             &format!("v{}", &version),
             "anchor-cli",
@@ -171,8 +171,8 @@ pub fn fetch_versions() -> Vec<semver::Version> {
 
     let client = reqwest::blocking::Client::new();
     let versions: Vec<Release> = client
-        .get("https://api.github.com/repos/RuvenSalamon/anchor/tags")
-        .header(USER_AGENT, "avm https://github.com/RuvenSalamon/anchor")
+        .get("https://api.github.com/repos/credix-finance/anchor/tags")
+        .header(USER_AGENT, "avm https://github.com/credix-finance/anchor")
         .send()
         .unwrap()
         .json()
